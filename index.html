@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <link rel="stylesheet" type="text/css" href="css/main.css">
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+  <!--Import bootstrap.min.css-->
+  <link type="text/css" rel="stylesheet" href="vendors/bootstrap/css/bootstrap.min.css" />
+  <!--Import bootstrap.min.css-->
+  <link type="text/css" rel="stylesheet" href="vendors/bootstrap/css/bootstrap-theme.min.css" />
+  <!-- main.css-->
+ 
+  <title>LabCar</title>
+</head>
+
+<body>
+  <header>
+  <nav class="navbar navbar-default" role="navigation">
+    <div class="container">
+       <div class="navbar-header">
+        <!--logotipo y menu hamburguesa-->
+         <button type="button" class="navbar-toggle" data-toggle="modal"
+                data-target="#myModalWindow">
+          <span class="sr-only">Desplegar navegación</span>
+          <span class="icon-bar blue"></span>
+          <span class="icon-bar blue"></span>
+          <span class="icon-bar blue"></span>
+         </button>
+          <a class="pull-left" href="#"><img alt="Brand" src="assets/images/logoForma.png"></a>
+       </div>
+       <!--los enlaces-->
+    <div class="collapse navbar-collapse navbar-ex1-collapse">
+      <ul class="nav navbar-nav  pull-right">
+        <li class=" dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+            Viaja
+          </a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Action #1</a></li>
+            <li><a href="#">Action #2</a></li>
+            <li><a href="#">Action #3</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Action #4</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Action #5</a></li>
+          </ul>
+        </li>
+        <li ><a href="#">Conduce</a></li>
+        <li ><a href="#"  data-toggle="modal" data-target="#myModalLogin" >Inicia Sesión</a></li>
+        
+      </ul>
+    </div> 
+
+    </div>
+    
+  </nav>  
+ </header>
+  <!--inicio modal login user-->
+   
+ 
+
+        <div class="modal" id="myModalLogin" >
+            <div class="modal-dialog" >
+              <div class="modal-content">
+                  <div class="modal-body center">
+            <form class="modal-content">
+              <div class="imgcontainer">
+               <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <img src="assets/images/user.png" alt="Loggin" class="avatar">
+              </div>
+            
+              <div class="container">
+                <label><b>Username</b></label>
+                <input type="text" placeholder="Username" required>
+
+                <label><b>Password</b></label>
+                <input type="password" placeholder="Password" required>
+                  
+                <button class="btn-primary" type="submit">Login</button>
+                <input type="checkbox" checked="checked"> Remember me
+              </div>
+
+              <div class="container" >
+                <button type="button" class="btn btn default">Cancel</button>
+                <span class="psw">Forgot <a href="#">password?</a></span>
+              </div>
+            </form>
+          </div>
+       </div>
+    </div>
+  </div> 
+
+  <!--fin modal login user -->
+
+
+  <!--inicio ventana modal registrar-->
+   <div class="modal fade" id="myModalWindowRegister">
+        <div class="modal-dialog">
+          <div class="modal-content">
+              <div class="modal-body center">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <button class="btn btn-primary account" type="submit">Ya tienes una cuenta?</button>
+                <p>O CREA UNA NUEVA CUENTA</p>
+                <form>
+                    <div class="form-group">
+                      <label class="sr-only">Nombre</label>
+                      <input type="text" class="form-control " placeholder="Nombre">
+                      <label class="sr-only">Apellido</label>
+                      <input type="text" class="form-control " placeholder="Apellido">
+                    </div>
+                    <div class="form-group">
+                      <label class="sr-only">Correo electronico</label>
+                      <input type="email" class="form-control" placeholder="Correo electronico: ejemplo@correo.com">
+                    </div>
+                    <div class="form-group">
+                        <label class="sr-only">Telefono</label>
+                        <input type="email" class="form-control" placeholder="Telefono">
+                    </div>
+                    <div class="form-group">
+                        <label class="sr-only">Contraseña</label>
+                        <input type="password" class="form-control" placeholder="Contraseña">
+                    </div>                    
+                    <div class="form-group">
+                        <label class="sr-only">Ciudad</label>
+                        <input type="password" class="form-control" placeholder="Ciudad">
+                    </div>
+                    <div class="form-group">
+                        <label class="sr-only">(Opcional) Codigo de invitación</label>
+                        <input type="password" class="form-control" placeholder="(Opcional) Codigo de invitación">
+                    </div>                                              
+                  </form>
+                  <button class="btn btn-primary block submit-down dropdown-toggle" data-toggle="dropdown" type="submit">Como te enteraste de nosotros? 
+                   <span class="glyphicon glyphicon-menu-down">                    
+                  </span>
+                  </button>
+                  <input class="btn btn-primary block submit-registrate" type="submit" value="ENVIAR"></input>
+              </div>
+          </div>
+        </div>
+      </div>
+  <!--fin ventana modal resgistrar--> 
+  <!--columnas responsive-->
+  <div class="container">
+     <section class="main row img-first image-big">
+      <div class="container-fluid">
+        <div>
+              <div class="form-register col-xs-10 col-sm-8 col-md-9 col-lg-9  col-xs-push-2 col-sm-push-3 col-md-6 col-md-push-6 col-lg-5 col-lg-push-7">
+                   <h3>Disfruta del viaje</h3>
+                   <h3>Eres dueño de tu tiempo</h3>
+                   <div>
+                   <span>viaja con </span> 
+                   <img class="img-whitelogo" src="assets/images/logoBlanco.png">
+                   </div> 
+              
+              <input class="btn btn-register" type="submit" value="REGÍSTRATE" data-toggle="modal" data-target="#myModalWindowRegister"> 
+               
+              </div>
+         </div>    
+      </div> 
+       <aside class="col-xs-12 col-sm-4 col-md-3 col-lg-3">
+          <p>
+           atat non
+            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </p>
+       </aside>
+     </section>
+     <div class="row">
+       <div class="col-xs-12 col-sm-6 col-md-3">
+         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod         
+         proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+       </div>
+       <div class="col-xs-12 col-sm-6 col-md-3">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+       </div>
+       <div class="col-xs-12 col-sm-6 col-md-3">
+         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+          proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+       </div>
+       <div class="col-xs-12 col-sm-6 col-md-3">
+         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+       </div>
+     </div>
+  </div>
+  <!--tabla responsive-->
+  <div class="container">
+    <div class="table-responsive">
+     <table class="table  table-striped table-bordered table-hover">
+       <tr class="active danger">
+          <th>#ID</th>
+          <th>Nombre</th>
+          <th>Usuario</th>
+          <th>Usuario</th>
+          <th>Usuario</th>
+          <th>Usuario</th>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>Nombre1</td>
+          <td>Usuario</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Nombre2</td>
+          <td>Usuario</td>
+        </tr>
+        <tr>
+           <td>3</td>
+           <td>Nombre3</td>
+           <td>Usuario</td>
+        </tr>
+        <tr>
+           <td>4</td>
+           <td>Nombre4</td>
+           <td>Usuario</td>
+       </tr>
+     </table>
+    </div>
+  </div>
+  <!--formulario responsive en blocks-->
+ <div class="container">
+   <br>
+   <form action="" class="">
+      <div class="form-group">  
+        <label for="nombre" class="">Nombre:</label>
+        <input class="form-control" id="nombre" type="text" placeholder="Nombre:">
+      </div>
+      <div class="form-group">
+        <label for="option">Elige una opción:</label>
+        <select class="form-control" name="" id="option">
+          <option value="">Option #1</option>
+          <option value="">Option #2</option>
+          <option value="">Option #3</option>
+          <option value="">Option #4</option>
+          <option value="">Option #5</option>
+        </select>
+      </div>
+      <div class="form-group">   
+        <label for="mensaje">Mensaje:</label>
+        <textarea class="form-control" id="mensaje" placeholder="Escribe tu mensaje:"></textarea>
+     </div>
+      <label for="archivo">Archivo:</label>
+      <input  id="archivo" type="file">
+      <p class="">Máximo 50MB</p>
+      <button class="btn btn-primary">Enviar</button>
+   </form>
+
+ </div> 
+<!--formulario responsive en inline-->
+<div class="container">
+   <br>
+   <form action="" class="form-inline">
+      
+     <div class="form-group">
+        <label class="sr-only" for="nombre">Nombre:</label>
+        <input class="form-control" id="nombre" type="text" placeholder = "Nombre:">
+      </div>
+     <div class="form-group">  
+        <div class="input-group">
+          <label class="sr-only" for="correo">Correo:</label>
+          <div class="input-group-addon">@</div>
+          <input class="form-control" id="correo" type="text" placeholder="Correo:">
+        </div>
+      </div>   
+     <div class="checkbox">
+          <label>
+            <input type="checkbox" name="" id="">Recuerdame
+          </label>
+      </div> 
+      <button class="btn btn-primary">Enviar</button>
+   </form>
+</div>
+<!--formulario responsive en inlike-block-->
+<div class="container">
+ <br>
+ <form action="" class="">
+   <div class="form-group">
+     <label for="nombre" class="control-label">Nombre:</label>
+     <div class="">
+       <input type="text" class="form-control" id="nombre">
+     </div>
+   </div>
+   <div class="form-group">
+     <label for="nombre" class="control-label">Nombre:</label>
+     <div class="">
+       <p class="">Carlos Arturo Esparza</p>
+     </div>
+   </div>
+   <div class="form-group">
+      <label for="correo" class="control-label">Correo:</label>
+      <div class="">
+        <input type="text" class="form-control" id="correo" placeholder="correo:">
+      </div>
+   </div>
+   https://www.nodebeginner.org/index-es.html
+
+ </form>
+
+</div>
+
+<footer>
+  <div class="container">
+    <h3>Yanina Mercado</h3>
+  </div>
+</footer>   
+
+  <script type="text/javascript" src="vendors/js/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="vendors/bootstrap/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="js/main.js"></script>
+</body>
+
+</html>

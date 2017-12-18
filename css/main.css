@@ -1,0 +1,24 @@
+/* Los estilos de tu proyecto */
+span.blue{
+ background-color: blue;	
+}
+
+.img-first{
+  background-image: url('../assets/images/taxi.jpg');
+
+
+}
+.form-register{
+ color: #fff;
+ background-color: #f7b617;
+}
+
+.btn-register{
+  font-weight:300;
+  color: black;
+  background-color: #FFF; 
+}
+.img-whitelogo{
+  margin:5px;
+  width: 15%  	
+}
