@@ -9,6 +9,7 @@ span.blue{
   background-size: cover;
   height: 100vh;
   width: 100%;
+  background-position: bottom;
 }
 .form-register{
  color: #fff;
@@ -24,12 +25,10 @@ span.blue{
   margin:5px;
   width: 15%  	
 }
-.center-form{
- margin-left: 20%;
-}
+
 .register-p {
     float: left;
-    margin: 10px;
+    margin: 10px 45px 30px 45px;
 }
 .register-text{
  outline: none;
@@ -42,3 +41,28 @@ span.blue{
  border-bottom-width: 2px;
  border-bottom-style: solid
 }
+.center-modal{
+padding-right: 10px;
+}
+.center-text{
+  text-align: center;
+}
+input.inline-inputs {
+    display: inline;
+    width: 49%;
+    margin: auto;
+}
+input.btn-driver{
+  padding-bottom:40px;
+  font-size: 20px;
+  text-align: center;
+}
+input.register-driver{
+  position: relative;
+  margin: 0 9rem 3rem 0;
+}
+img.center{
+  text-align: center;
+  padding: 5px;
+}
+
