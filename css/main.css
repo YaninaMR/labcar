@@ -27,13 +27,17 @@ span.blue{
 .center-form{
  margin-left: 20%;
 }
+p.register-p {
+    float: left;
+    margin: 10px;
+}
 .register-text{
  outline: none;
  border-radius: 0;
  border-width: 0;
  background-color: transparent;
  width: 30%;
- display: flex;
+ float: left;
  margin-bottom: 15px;
  border-bottom-width: 2px;
  border-bottom-style: solid
