@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous"> 
    <link rel="stylesheet" type="text/css" href="css/main.css">
   <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
   <!--Import bootstrap.min.css-->
@@ -19,10 +20,11 @@
   <header>
   <nav class="navbar navbar-default" role="navigation">
     <div class="container">
+
        <div class="navbar-header">
         <!--logotipo y menu hamburguesa-->
-         <button type="button" class="navbar-toggle" data-toggle="modal"
-                data-target="#myModalWindow">
+         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                data-target="#modalNavbar" aria-expanded="false" aria-controls="navbar">
           <span class="sr-only">Desplegar navegación</span>
           <span class="icon-bar blue"></span>
           <span class="icon-bar blue"></span>
@@ -31,14 +33,14 @@
           <a class="pull-left" href="#"><img alt="Brand" src="assets/images/logoForma.png"></a>
        </div>
        <!--los enlaces-->
-    <div class="collapse navbar-collapse navbar-ex1-collapse">
+    <div class="collapse navbar-collapse navbar-ex1-collapse" id="modalNavbar">
       <ul class="nav navbar-nav  pull-right">
         <li class=" dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown">
             Viaja
           </a>
           <ul class="dropdown-menu">
-            <li><a href="#">Rusia</a></li>
+            <li><a href="#" data-toggle="modal" data-target="#myModalfly"><i class="fa fa-flag" aria-hidden="true"></i>Rusia</a></li>
             <li><a href="#">Europa</a></li>
             <li><a href="#">Japon</a></li>
             <li class="divider"></li>
@@ -47,13 +49,13 @@
             <li><a href="#">EEUU</a></li>
           </ul>
         </li>
-        <li ><a href="#" data-toggle="modal" data-target="#myModalWindowRegister">Conduce</a></li>
+        <li ><a href="#" data-toggle="modal" data-target="#myModalBecomeDriver">Conduce</a></li>
         <li ><a href="#"  data-toggle="modal" data-target="#myModalLogin" >Inicia Sesión</a></li>
         
       </ul>
     </div> 
 
-    </div>
+  </div>
     
   </nav>  
  </header>
@@ -62,31 +64,37 @@
      <div class="modal" id="myModalLogin">
         <div class="modal-fade">
           <div class="modal-dialog"> 
- 
-            <form class="modal-content center-form">
-              <div class="modal-header center">
-               <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <img src="assets/images/user.png" alt="Loggin" class="avatar">
-              </div>
-            <div class="modal-body center">           
-              <div class="form-group"> 
-                  <label class="sr-only"><b>Usuario</b></label>
-                    <div class="input-group-addon">
-                    <span class="glyphicon glyphicon-user" aria-hidden="true"></span></div>
-                  <input type="text" placeholder="Usuario" required>
-               </div>
-               <div class="form-group">  
-                  <label class="sr-only"><b>Contraseña</b></label>
-                  <div class="input-group-addon">
-                    <span class="" aria-hidden="true">@</span></div>
-                  <input type="password" placeholder="Contraseña" required>
-               </div>   
-                <button class="btn-primary" type="submit">Login</button>
-                <input type="checkbox" checked="checked"> Recordarme      
-                <button type="button" class="btn btn default">Cancel</button>
-                <p class="psw">Olvidaste <a href="#">Contraseña?</a></p>
-             </div>
-            </form>
+           <div class="row">
+              <div class="col-xs-10 col-md-10 col-lg-10">
+                <form class="modal-content center-form">
+                  <div class="modal-header center">
+                   <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <img src="assets/images/user.png" alt="Loggin" class="center">
+                  </div>
+                    <div class="modal-body center">           
+                  <div class="form-group">
+                   <div class="input-group"> 
+                      <label class="sr-only"><b>Usuario</b></label>
+                        <div class="input-group-addon">
+                        <span class="glyphicon glyphicon-user" aria-hidden="true"></span></div>
+                      <input class="form-control" type="text" placeholder="Usuario" required>
+                    </div>  
+                   </div>
+                   <div class="form-group">  
+                     <div class="input-group">
+                      <label class="sr-only"><b>Contraseña</b></label>
+                      <div class="input-group-addon">
+                        <span class="" aria-hidden="true">@</span></div>
+                      <input class="form-control" type="password" placeholder="Contraseña" required>
+                     </div>  
+                   </div>   
+                    <button class="btn-primary" type="submit">Login</button>
+                    <input type="checkbox" checked="checked"> Recordarme      
+                    <button type="button" class="btn btn default">Cancel</button>
+                    <p class="psw">Olvidaste <a href="#">Contraseña?</a></p>
+                 </div>
+                </form>
+              </div>  
           </div>
        </div>
       </div>  
@@ -96,54 +104,56 @@
 
 
   <!--inicio ventana modal registrar-->
-   <div class="modal fade" id="myModalWindowRegister">
-        <div class="modal-dialog">
-          <div class="modal-content">
-              <div class="modal-body center">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <button class="btn btn-primary account" type="submit">Ya tienes una cuenta?</button>
-                <p>O CREA UNA NUEVA CUENTA</p>
-                <form>
-                    <div class="form-group">
-                      <label class="sr-only">Nombre</label>
-                      <input type="text" class="form-control " placeholder="Nombre">
-                      <label class="sr-only">Apellido</label>
-                      <input type="text" class="form-control " placeholder="Apellido">
-                    </div>
-                    <div class="form-group">
-                      <label class="sr-only">Correo electronico</label>
-                      <input type="email" class="form-control" placeholder="Correo electronico: ejemplo@correo.com">
-                    </div>
-                    <div class="form-group">
-                        <label class="sr-only">Telefono</label>
-                        <input type="email" class="form-control" placeholder="Telefono">
-                    </div>
-                    <div class="form-group">
-                        <label class="sr-only">Contraseña</label>
-                        <input type="password" class="form-control" placeholder="Contraseña">
-                    </div>                    
-                    <div class="form-group">
-                        <label class="sr-only">Ciudad</label>
-                        <input type="password" class="form-control" placeholder="Ciudad">
-                    </div>
-                    <div class="form-group">
-                        <label class="sr-only">(Opcional) Codigo de invitación</label>
-                        <input type="password" class="form-control" placeholder="(Opcional) Codigo de invitación">
-                    </div>                                              
+     <div class="modal fade" id="myModalWindowRegister">
+          <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body center-text">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                  <button class="btn btn-primary form-control" type="submit">Ya tienes una cuenta?</button>
+                  <p>O CREA UNA NUEVA CUENTA</p>
+                  <form>
+                      <div class="form-group ">
+                        <label class="sr-only">Nombre</label>
+                        <input type="text" class="inline-inputs form-control" placeholder="Nombre">
+                        <label class="sr-only">Apellido</label>
+                        <input type="text" class="inline-inputs form-control" placeholder="Apellido">
+                      </div>
+                      <div class="form-group">
+                        <label class="sr-only">Correo electronico</label>
+                        <input type="email" class="form-control" placeholder="Correo electronico: ejemplo@gmail.com">
+                      </div>
+                      <div class="form-group">
+                          <label class="sr-only">Telefono</label>
+                          <input type="email" class="form-control" placeholder="Telefono">
+                      </div>
+                      <div class="form-group">
+                          <label class="sr-only">Contraseña</label>
+                          <input type="password" class="form-control" placeholder="Contraseña">
+                      </div>                    
+                      <div class="form-group">
+                          <label class="sr-only">Ciudad</label>
+                          <input type="password" class="form-control" placeholder="Ciudad">
+                      </div>
+                      <div class="form-group">
+                          <label class="sr-only">(Opcional) Codigo de invitación</label>
+                          <input type="password" class="form-control" placeholder="(Opcional) Codigo de invitación">
+                      </div>                                              
+                   <div class="form-group">
+                      <button class="btn btn-info form-control submit-down dropdown-toggle" data-toggle="dropdown" type="submit">Como te enteraste de nosotros? 
+                       <span class="glyphicon glyphicon-menu-down">                    
+                      </span>
+                      </button>
+                  </div>
+                   <input class="btn btn-primary form-control" type="submit" value="ENVIAR"></input>
                   </form>
-                  <button class="btn btn-primary block submit-down dropdown-toggle" data-toggle="dropdown" type="submit">Como te enteraste de nosotros? 
-                   <span class="glyphicon glyphicon-menu-down">                    
-                  </span>
-                  </button>
-                  <input class="btn btn-primary block submit" type="submit" value="ENVIAR"></input>
-              </div>
+                </div>
+            </div>
           </div>
         </div>
-      </div>
+
   <!--fin ventana modal resgistrar--> 
   <!--columnas responsive-->
-  <div class="container">
-     <section class="main row img-first">
+   <section class="main img-first">
       <div class="container-fluid">
         <div>
                        <div class="form-register col-xs-10 col-sm-8 col-md-9 col-lg-9  col-xs-push-2 col-sm-push-3 col-md-6 col-md-push-6 col-lg-5 col-lg-push-7">
@@ -160,72 +170,65 @@
                       <p class="register-p"> o bien </p>
                       <input class="register-text" type="text"> 
                       </div>
-                    <input class="btn btn-register" type="submit" value="Conviertete en un conductor" data-toggle="modal" data-target="#myModalBecomeDriver"> 
-               
-              </div>
+                  
+                      <input class="btn btn-register register-driver" type="submit" value="Conviertete en un conductor" data-toggle="modal" data-target="#myModalBecomeDriver">  
+                 
          </div>    
       </div> 
-
+   </section> 
  <!--inicio ventana modal formularioconvertirse en condutors-->
-  <div class="modal fade" id="myModalBecomeDriver">
+  
+       <div class="modal fade center-modal" id="myModalBecomeDriver">
         <div class="modal-dialog">
           <div class="modal-content">
               <div class="modal-body center">
-                <select class="close glyphicon glyphicon-remove-circle" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></select>
-                
+                <button class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              
                 <form>
-                    <div class="dropdown">
-                        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                          select
-                          <span class="caret"></span>
-                        </button>
-                        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                          <li><a href="#">Si</a></li>
-                          <li role="separator" class="divider"></li>
-                          <li><a href="#">No</a></li>
-                        </ul>
-                    </div>
-                    <div class="dropdown">
-                        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                          Elige la marca del vehiculo
-                          <span class="caret"></span>
-                        </button>
-                        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                          <li><a href="#">Toyota</a></li>
-                          <li><a href="#">Nissan</a></li>
-                          <li><a href="#">Mitsui</a></li>
-                        </ul>
-                    </div>
-                    <div class="dropdown">
-                        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                          Modelo
-                          <span class="caret"></span>
-                        </button>
-                        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                          <li><a href="#">Model 1</a></li>
-                          <li><a href="#">Model 2</a></li>
-                          <li><a href="#">Model 3</a></li>
-                        </ul>
-                    </div>
-                    <div class="dropdown">
-                        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                          Año
-                          <span class="caret"></span>
-                        </button>
-                        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                          <li><a href="#">2017</a></li>
-                          <li><a href="#">2016</a></li>
-                          <li><a href="#">2015</a></li>
-                        </ul>
-                    </div>
-                    <div class="form-group">
+                  <div class="form-group">
+                    <label for="sel1">¿tienes vehículo de 4 puertas?</label>
+                    <select class="form-control" id="sel1">
+                      <option selected>si</option>
+                      <option>no</option>
+                    </select>
+                    <br> 
+                    <label for="sel1">Marca</label>
+                    <select class="form-control" id="sel1">
+                      <option selected>Elige la marca del vehículo</option>
+                      <option>Toyota</option>
+                      <option>Nissan</option>
+                      <option> Ford</option>
+                    </select>
+                    <br> 
+                    <label for="sel1">Modelo</label>
+                    <select class="selectpicker form-control" id="sel1">
+                      <option selected>Elige modelo</option>
+                      <option>4x4</option>
+                      <option>Berlina</option>
+                      <option>Ecológico</option>
+                      <option>Eléctrico</option>
+                      <option>Familiar</option>
+                      <option>Monovolumen</option>
+                   </select>
+                    <br> 
+                     <label for="sel1">Año</label>
+                    <select class="selectpicker form-control" id="sel1">
+                      <option selected>2017</option>
+                      <option>2016</option>
+                      <option>2015</option>
+                      <option>2014</option>
+                    </select>
+                    <br> 
+                   <div class="form-group">
                     <label for="">Número de Matrícula</label>
                     <input type="text" class="form-control" placeholder="Número de Matrícula">
-                  </div>
-                    <input class="btn btn-primary " type="submit" value="ENVIAR"></input>                                           
-                </form>
-                  
-              </div>
+                    <p>La información de la matrícula ayuda a los clientes a identificar tu vehículo</p>  
+                  </div>             
+                    <input class="btn btn-info form-control btn-driver" type="submit" value="ENVIAR"></input>
+                </div>                                           
+              </form>
+          
+            </div>
           </div>
         </div>
       </div>
@@ -234,34 +237,28 @@
 
  <!--inicio formulario para viajar a rusia -->
     <div class="panel col-sm-12 col-xs-12">
-            <div class="link-to-application visible-xs-block" role="tab" tabindex="-1">
-               <a role="button" class="collapse in" data-parent="#accordion" data-url="false" data-toggle="collapse"  aria-expanded="true" >
-
-                  <div class="nav-content-left">
-                <span class="icon-regular-air001 icon-medium icon-color icon-style"></span>
-                </div>
-                <div class="nav-title-column">
-                <p>Reserva tu vuelo</p>
-                </div>
-                <div class="nav-content-arrow">
-                <span class="icon-int-caret-right icon-xsmall icon-style"></span>
-                <span class="icon-int-caret-up icon-xsmall icon-style"></span>
-                </div>
-
-                </a>
+       <div class="modal fade center-modal" id="myModalfly">
+        <div class="modal-dialog">
+          <div class="modal-content"> 
+           <form>  
+             <button type="button" class="fa fa-window-close"" data-dismiss="modal" aria-label="Close"></button>
+            <input id="select-origin"  type="text" placeholder="Ciudad o aeropuerto" aria-required="true" class="form-control"  autocomplete="off" aria-haspopup="false" role="combobox" aria-autocomplete="both" >
+            <div class="form-group">
+              <input type="radio"  checked="checked" aria-label="Ida y vuelta"> 
+              <label><span><span></span></span>Ida y vuelta</label>
             </div>
-
-          
-                 
-       
-          </div>
-      </div></div>
+            <input class="btn btn-success form-control btn-driver" type="submit" value="COMPRAR"></input>
+           </form>  
+        </div>
+     </div> 
+    </div> 
+   </div>
 
     
  <!--fin formulario para viajar a rusia -->
 
 
-     </section>
+     
      <div class="row">
        <div class="col-xs-12 col-sm-6 col-md-3">
          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod         
